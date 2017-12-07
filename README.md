@@ -4,11 +4,11 @@
 
 ## 索引
 
-- [磁盘分区](#)
-- [磁盘格式化](#)
-- [挂载分区](#)
-- [修改 fstab](#)
-- [创建 deploy 账户](#)
+- [磁盘分区](https://github.com/songjiayang/linux.cookbook#磁盘分区)
+- [磁盘格式化](https://github.com/songjiayang/linux.cookbook#磁盘格式化)
+- [挂载分区](https://github.com/songjiayang/linux.cookbook#挂载分区)
+- [修改 fstab](https://github.com/songjiayang/linux.cookbook#修改-fstab)
+- [创建 deploy 账户](https://github.com/songjiayang/linux.cookbook#创建-deploy-账户)
 
 ### 磁盘分区
 
