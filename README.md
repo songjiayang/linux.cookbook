@@ -16,6 +16,7 @@
     - [安装 Supervisord](https://github.com/songjiayang/linux.cookbook#安装-supervisord)
     - [安装 MongoDB](https://github.com/songjiayang/linux.cookbook#安装-mongodb)
     - [安装 MySQL](https://github.com/songjiayang/linux.cookbook#安装-mysql)
+    - [安装 SSL 证书](https://github.com/songjiayang/linux.cookbook#安装-SSL-证书)
 
 ### 磁盘分区
 
@@ -107,6 +108,10 @@ codename 指不同平台的特定版本，具体参考 [nginx download](http://n
 前后端分离服务简易模版：
 
 ```vi
+
+log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                  '$request_time-$upstream_response_time $status $body_bytes_sent "$http_referer" '
+                  '"$http_user_agent" "$http_x_forwarded_for"';
 upstream example-backend {
     keepalive 60;
     server 127.0.0.1:9090;
@@ -199,3 +204,35 @@ sudo apt-get install -y mongodb-org
 ### 安装 MySQL
 
 comming soon
+
+### 安装 SSL 证书
+
+这里我们使用 [acme.sh](https://github.com/Neilpang/acme.sh) 来安装。
+
+acme.sh 涉及命令：
+
+```
+curl https://get.acme.sh | sh  # 安装 acme.sh
+
+0 0 * * * "/home/user/.acme.sh"/acme.sh --cron --home "/home/user/.acme.sh" > /dev/null # 定期跟新证书，因为证书3个月会失效
+
+acme.sh --issue -d example.com -w /home/wwwroot/example.com # 申请特定域名证书
+
+# 安装域名证书
+acme.sh --install-cert -d example.com \
+--key-file       /path/to/keyfile/in/nginx/key.pem  \
+--fullchain-file /path/to/fullchain/nginx/cert.pem \
+--reloadcmd     "service nginx force-reload"
+```
+
+nignx 配置：
+
+```
+
+listen 443 ssl;
+
+server_name hotel.hz-hanghui.com;
+ssl_certificate     /etc/nginx/ssl/hotel.hz-hanghui.com.cert.pem;
+ssl_certificate_key /etc/nginx/ssl/hotel.hz-hanghui.com.key.pem;
+
+```
