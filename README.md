@@ -242,7 +242,7 @@ server {
 server {
   listen 443 ssl;
 
-  server_name example.com;;
+  server_name example.com;
   ssl_certificate     /etc/nginx/ssl/example.com;.cert.pem;
   ssl_certificate_key /etc/nginx/ssl/example.com;.key.pem;
 }
