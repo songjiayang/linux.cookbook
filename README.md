@@ -16,7 +16,7 @@
     - [安装 Supervisord](https://github.com/songjiayang/linux.cookbook#安装-supervisord)
     - [安装 MongoDB](https://github.com/songjiayang/linux.cookbook#安装-mongodb)
     - [安装 MySQL](https://github.com/songjiayang/linux.cookbook#安装-mysql)
-    - [安装 SSL 证书](https://github.com/songjiayang/linux.cookbook#安装-SSL-证书)
+    - [安装 SSL 证书](https://github.com/songjiayang/linux.cookbook#安装-ssl-证书)
 
 ### 磁盘分区
 
@@ -229,10 +229,22 @@ nignx 配置：
 
 ```
 
-listen 443 ssl;
+# 80 端口跳转 443
+server {
+  listen 80;
+  
+  server_name example.com;
+  
+  return 301 https://$host$request_uri;
+}
 
-server_name hotel.hz-hanghui.com;
-ssl_certificate     /etc/nginx/ssl/hotel.hz-hanghui.com.cert.pem;
-ssl_certificate_key /etc/nginx/ssl/hotel.hz-hanghui.com.key.pem;
+# 443 端口配置
+server {
+  listen 443 ssl;
+
+  server_name example.com;;
+  ssl_certificate     /etc/nginx/ssl/example.com;.cert.pem;
+  ssl_certificate_key /etc/nginx/ssl/example.com;.key.pem;
+}
 
 ```
