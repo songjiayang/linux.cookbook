@@ -3,7 +3,7 @@
 个人工作中用到的 Linux 琐碎知识点汇总，所有例子都能运行在 Ubuntu 系统上。
 
 ## 索引
- - 系统环境
+ - 系统
     - [磁盘分区](https://github.com/songjiayang/linux.cookbook#磁盘分区)
     - [磁盘格式化](https://github.com/songjiayang/linux.cookbook#磁盘格式化)
     - [挂载分区](https://github.com/songjiayang/linux.cookbook#挂载分区)
@@ -11,6 +11,7 @@
     - [创建 deploy 账户](https://github.com/songjiayang/linux.cookbook#创建-deploy-账户)
     - [配置 ssh](https://github.com/songjiayang/linux.cookbook#配置-ssh)
     - [配置系统语言环境](https://github.com/songjiayang/linux.cookbook#配置系统语言环境)
+    - [后台运行任务](https://github.com/songjiayang/linux.cookbook#后台运行任务)
 - 应用软件
     - [安装 Nginx](https://github.com/songjiayang/linux.cookbook#安装-nginx)
     - [安装 Supervisord](https://github.com/songjiayang/linux.cookbook#安装-supervisord)
@@ -89,6 +90,16 @@ sudo vi /etc/default/locale
 LANG="zh_CN.UTF-8"
 LANGUAGE="zh_CN.UTF-8"
 LC_ALL="zh_CN.UTF-8"
+```
+
+### 后台运行任务
+
+```
+ctrl + z // 当然任务添加到 jobs 队列
+jobs // 查看当前任务队列
+bg <JOB_ID> // 后台运行任务
+fg <JOB_ID> // 前台运行任务
+ctrl + c // 退出前台任务
 ```
 
 ### 安装 Nginx
