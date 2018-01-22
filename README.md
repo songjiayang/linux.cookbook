@@ -10,8 +10,8 @@
     - [修改 fstab](https://github.com/songjiayang/linux.cookbook#修改-fstab)
     - [创建 deploy 账户](https://github.com/songjiayang/linux.cookbook#创建-deploy-账户)
     - [配置 ssh](https://github.com/songjiayang/linux.cookbook#配置-ssh)
-    - [配置系统语言环境](https://github.com/songjiayang/linux.cookbook#配置系统语言环境)
-    - [后台运行任务](https://github.com/songjiayang/linux.cookbook#后台运行任务)
+    - [配置系统语言环境](https://github.com/songjiayang/linux.cookbook#配置系统语言环境) 
+    - [后台运行任务](https://github.com/songjiayang/linux.cookbook#后台运行任务)
 - 应用软件
     - [安装 Nginx](https://github.com/songjiayang/linux.cookbook#安装-nginx)
     - [安装 Supervisord](https://github.com/songjiayang/linux.cookbook#安装-supervisord)
