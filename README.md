@@ -18,6 +18,7 @@
     - [安装 MongoDB](https://github.com/songjiayang/linux.cookbook#安装-mongodb)
     - [安装 MySQL](https://github.com/songjiayang/linux.cookbook#安装-mysql)
     - [安装 SSL 证书](https://github.com/songjiayang/linux.cookbook#安装-ssl-证书)
+    - [Nginx 添加 Basic Auth](https://github.com/songjiayang/linux.cookbook#nginx-添加-basic-auth)
 
 ### 磁盘分区
 
@@ -258,4 +259,28 @@ server {
   ssl_certificate_key /etc/nginx/ssl/example.com.key.pem;
 }
 
+```
+
+### Nginx 添加 Basic Auth
+
+安装 apache2-utils
+
+```
+sudo apt-get install apache2-utils
+```
+
+生成认证密钥
+
+```
+htpasswd -c /etc/nginx/.htpasswd monitor
+```
+
+修改 nginx 配置
+
+```
+location / {
+  auth_basic "Prometheus";
+  auth_basic_user_file "/etc/nginx/.htpasswd";
+  proxy_pass http://localhost:9090/;
+}
 ```
