@@ -241,8 +241,8 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 ```
 
-参考 [install MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)。
-参考 [install MongoDB on Ubuntu 16.04](https://hevodata.com/blog/install-mongodb-on-ubuntu/)
+参考 [install MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)。  
+参考 [install MongoDB on Ubuntu 16.04](https://hevodata.com/blog/install-mongodb-on-ubuntu/)。  
 
 ### 安装 MySQL
 
