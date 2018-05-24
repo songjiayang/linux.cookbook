@@ -134,6 +134,10 @@ deploy ALL=(ALL) NOPASSWD:ALL
 wget http://nginx.org/keys/nginx_signing.key
 sudo apt-key add nginx_signing.key
 
+sudo vi /etc/apt/sources.list
+
+### add to /etc/apt/sources.list
+
 deb http://nginx.org/packages/ubuntu/ codename nginx
 deb-src http://nginx.org/packages/ubuntu/ codename nginx
 
