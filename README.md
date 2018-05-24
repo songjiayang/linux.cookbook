@@ -12,6 +12,9 @@
     - [配置 ssh](https://github.com/songjiayang/linux.cookbook#配置-ssh)
     - [配置系统语言环境](https://github.com/songjiayang/linux.cookbook#配置系统语言环境) 
     - [后台运行任务](https://github.com/songjiayang/linux.cookbook#后台运行任务)
+    - [创建用户](https://github.com/songjiayang/linux.cookbook#创建用户)
+    - [修改密码](https://github.com/songjiayang/linux.cookbook#修改密码)
+    - [sudo免密](https://github.com/songjiayang/linux.cookbook#sudo免密)
 - 应用软件
     - [安装 Nginx](https://github.com/songjiayang/linux.cookbook#安装-nginx)
     - [安装 Supervisord](https://github.com/songjiayang/linux.cookbook#安装-supervisord)
@@ -101,6 +104,27 @@ jobs // 查看当前任务队列
 bg <JOB_ID> // 后台运行任务
 fg <JOB_ID> // 前台运行任务
 ctrl + c // 退出前台任务
+```
+
+### 创建用户
+
+```
+sudo adduser deploy
+sudo usermod -a -G sudo deploy
+```
+
+### 修改密码
+
+```
+sudo passwd username
+```
+
+### sudo免密
+
+```
+sodo vi /etc/sudoers.d/no-password
+## /etc/sudoers.d/no-password
+deploy ALL=(ALL) NOPASSWD:ALL
 ```
 
 ### 安装 Nginx
