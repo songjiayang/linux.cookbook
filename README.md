@@ -11,10 +11,11 @@
     - [创建 deploy 账户](https://github.com/songjiayang/linux.cookbook#创建-deploy-账户)
     - [配置 ssh](https://github.com/songjiayang/linux.cookbook#配置-ssh)
     - [配置系统语言环境](https://github.com/songjiayang/linux.cookbook#配置系统语言环境) 
-    - [后台运行任务](https://github.com/songjiayang/linux.cookbook#后台运行任务)
-    - [创建用户](https://github.com/songjiayang/linux.cookbook#创建用户)
-    - [修改密码](https://github.com/songjiayang/linux.cookbook#修改密码)
-    - [sudo免密](https://github.com/songjiayang/linux.cookbook#sudo免密)
+    - [后台运行任务](https://github.com/songjiayang/linux.cookbook#后台运行任务)    
+    - [创建用户](https://github.com/songjiayang/linux.cookbook#创建用户)  
+    - [修改密码](https://github.com/songjiayang/linux.cookbook#修改密码)      
+    - [sudo免密](https://github.com/songjiayang/linux.cookbook#sudo免密)  
+    
 - 应用软件
     - [安装 Nginx](https://github.com/songjiayang/linux.cookbook#安装-nginx)
     - [安装 Supervisord](https://github.com/songjiayang/linux.cookbook#安装-supervisord)
