@@ -15,6 +15,7 @@
     - [创建用户](https://github.com/songjiayang/linux.cookbook#创建用户)  
     - [修改密码](https://github.com/songjiayang/linux.cookbook#修改密码)      
     - [sudo免密](https://github.com/songjiayang/linux.cookbook#sudo免密)  
+    - [dd命令生成文件](https://github.com/songjiayang/linux.cookbook#dd命令生成文件)
     
 - 应用软件
     - [安装 Nginx](https://github.com/songjiayang/linux.cookbook#安装-nginx)
@@ -126,6 +127,12 @@ sudo passwd username
 sodo vi /etc/sudoers.d/no-password
 ## /etc/sudoers.d/no-password
 deploy ALL=(ALL) NOPASSWD:ALL
+```
+
+## dd命令生成文件
+
+```
+dd if=/dev/urandom of=testfile count=1024 bs=1024
 ```
 
 ### 安装 Nginx
